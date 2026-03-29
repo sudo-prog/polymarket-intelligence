@@ -25,7 +25,7 @@ export interface RAGGodState {
     reconnectAttempts: number
 }
 
-const WS_URL = 'ws://localhost:8000/ws/rag-god'
+const WS_URL = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws/rag-god`
 const MAX_RECONNECT_ATTEMPTS = 5
 const RECONNECT_DELAY = 3000
 
